@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website</title>
+    <title>BLIGHTZONE | Read web comics online free</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
@@ -15,6 +15,7 @@
 
         /* Breathing background */
         body {
+            background-color: black;
             background: url('bkg.jpg') no-repeat center center fixed;
             background-size: cover;
             animation: breatheBackground 6s ease-in-out infinite;
@@ -42,11 +43,28 @@
         }
 
         h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: white;
-            font-family: 'Lexend', sans-serif; /* Apply Lexend font */
-        }
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1; /* Adjust this value to control the spacing */
+}
+
+.line-one, .line-two {
+    display: inline-block;
+    width: 100%; /* Both lines will have the same width */
+}
+
+.line-one {
+    font-size: 1.5rem; /* Make the first line smaller */
+    font-weight: normal; /* Normal font weight for subtlety */
+}
+
+.line-two {
+    font-size: 3.4rem; /* Larger size for emphasis */
+    font-weight: bold;
+}
 
         button {
             font-size: 1rem;
@@ -68,12 +86,21 @@
         button:active {
             transform: scale(0.95);
         }
+
+
+
+
+        
+        
     </style>
 </head>
 <body>
     <div class="content">
         <img src="lgoo-w.png" alt="Centered Image">
-        <h1>Art & Story by FAVES</h1>
+        <h1>
+            <span class="line-one">Art & Story by</span><br>
+            <span class="line-two">FAVES</span>
+        </h1>
         <button onclick="window.open('https://x.com/blightzone', '_blank')">Official Updates</button>
     </div>
 </body>
