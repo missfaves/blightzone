@@ -17,14 +17,14 @@
         body {
             background-color: black;
             background: url('bkg.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-size: stretch;
             animation: breatheBackground 6s ease-in-out infinite;
         }
 
         @keyframes breatheBackground {
-            0% { background-size: 100%; }
-            50% { background-size: 105%; }
-            100% { background-size: 100%; }
+            0% { background-size: 125%; }
+            50% { background-size: 130%; }
+            100% { background-size: 125%; }
         }
 
         .content {
@@ -37,7 +37,7 @@
 
         img {
             width: 100%;
-            min-width: 250px; /* Set a consistent maximum width */
+            min-width: 300px; /* Set a consistent maximum width */
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 20px;
         }
