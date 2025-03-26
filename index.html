@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Breathing background */
+        body {
+            background: url('bkg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: breatheBackground 6s ease-in-out infinite;
+        }
+
+        @keyframes breatheBackground {
+            0% { background-size: 100%; }
+            50% { background-size: 105%; }
+            100% { background-size: 100%; }
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            min-width: 500px; /* Set a consistent maximum width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+            font-family: 'Lexend', sans-serif; /* Apply Lexend font */
+        }
+
+        button {
+            font-size: 1rem;
+            font-weight: bold; /* Bold text */
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(214, 214, 214);
+            color: black;
+            border-radius: 25px; /* Rounder edges */
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Lexend', sans-serif; /* Apply Lexend font */
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="lgoo-w.png" alt="Centered Image">
+        <h1>Art & Story by FAVES</h1>
+        <button onclick="window.open('https://x.com/blightzone', '_blank')">Official Updates</button>
+    </div>
+</body>
+</html>
