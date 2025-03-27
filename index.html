@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLIGHTZONE | Read web comics online free</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/91d1c94285.js" crossorigin="anonymous"></script>
     <style>
         body, html {
             margin: 0;
@@ -13,7 +14,6 @@
             overflow: hidden;
         }
 
-        /* Breathing background */
         body {
             background-color: black;
             background: url('bkg.jpg') no-repeat center center fixed;
@@ -37,46 +37,52 @@
 
         img {
             width: 100%;
-            min-width: 300px; /* Set a consistent maximum width */
-            height: auto; /* Maintain aspect ratio */
+            min-width: 300px; 
+            height: auto; 
             margin-bottom: 20px;
         }
 
-        h1 {
+        h1, #countdown {
     font-size: 2rem;
     color: white;
     font-family: 'Lexend', sans-serif;
     margin-bottom: 20px;
     text-align: center;
-    line-height: 1; /* Adjust this value to control the spacing */
+    line-height: 1; 
 }
 
-.line-one, .line-two {
+#countdown {
+    Margin-bottom:30px;
+
+}
+
+.line-one, .line-two, p {
     display: inline-block;
-    width: 100%; /* Both lines will have the same width */
+    width: 100%;
 }
 
-.line-one {
-    font-size: 1.5rem; /* Make the first line smaller */
-    font-weight: normal; /* Normal font weight for subtlety */
+.line-one, #countdown {
+    font-size: 1.2rem;
+    font-weight: normal; 
 }
 
 .line-two {
-    font-size: 3.4rem; /* Larger size for emphasis */
+    font-size: 2.5rem; 
     font-weight: bold;
 }
 
         button {
             font-size: 1rem;
-            font-weight: bold; /* Bold text */
+            font-weight: bold; 
             padding: 10px 20px;
+            margin: 5px 5px;
             border: none;
             background-color: rgb(214, 214, 214);
             color: black;
-            border-radius: 25px; /* Rounder edges */
+            border-radius: 25px; 
             cursor: pointer;
             text-decoration: none;
-            font-family: 'Lexend', sans-serif; /* Apply Lexend font */
+            font-family: 'Lexend', sans-serif;
         }
 
         button:hover {
@@ -87,21 +93,53 @@
             transform: scale(0.95);
         }
 
-
-
-
-        
         
     </style>
 </head>
 <body>
     <div class="content">
+
         <img src="lgoo-w.png" alt="Centered Image">
+
+        <div id="countdown"></div>
+
+        <script>
+            // Set the date we're counting down to
+            const countdownDate = new Date("2025-05-30T12:00:00").getTime();
+    
+            // Update the countdown every second
+            const interval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+    
+                // Time calculations for days, hours, minutes, and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Display the result
+                document.getElementById("countdown").innerHTML = 
+                    `New chapter coming in ${days} days`;
+    
+                // If the countdown is finished, display a message
+                if (distance < 0) {
+                    clearInterval(interval);
+                    document.getElementById("countdown").innerHTML = "The countdown has ended!";
+                }
+            }, 1000);
+        </script>
+
+<div class="footer">
         <h1>
             <span class="line-one">Art & Story by</span><br>
             <span class="line-two">FAVES</span>
         </h1>
-        <button onclick="window.open('https://x.com/blightzone', '_blank')">Official Updates</button>
+        <button onclick="window.open('https://x.com/blightzone', '_blank')"><i class="fa-brands fa-twitter"></i> Twitter</button>
+        <button onclick="window.open('https://www.instagram.com/blightzone', '_blank')"><i class="fa-brands fa-instagram"></i> Instagram</button>
     </div>
+</div>
+
+
 </body>
 </html>
