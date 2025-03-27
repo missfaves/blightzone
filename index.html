@@ -101,31 +101,30 @@
 
         <img src="lgoo-w.png" alt="Centered Image">
 
-        <div id="countdown"></div>
+        <div id="countdown">New chapter coming in &#8635; days</div>
 
         <script>
-            // Set the date we're counting down to
+            // YYYY-MM-DD
             const countdownDate = new Date("2025-05-30T12:00:00").getTime();
-    
-            // Update the countdown every second
+
             const interval = setInterval(function() {
                 const now = new Date().getTime();
                 const distance = countdownDate - now;
     
-                // Time calculations for days, hours, minutes, and seconds
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-                // Display the result
+
                 document.getElementById("countdown").innerHTML = 
                     `New chapter coming in ${days} days`;
     
-                // If the countdown is finished, display a message
+
                 if (distance < 0) {
                     clearInterval(interval);
-                    document.getElementById("countdown").innerHTML = "The countdown has ended!";
+                    document.getElementById("countdown").innerHTML = "New chapter published";
                 }
             }, 1000);
         </script>
