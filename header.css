@@ -1,0 +1,221 @@
+
+
+/* Ensure the body and html take up the full viewport height */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack header and main vertically */
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+}
+
+button{font-family: "Afacad Flux", sans-serif; font-optical-sizing: auto; font-optical-sizing: auto;}
+
+header {width: 100%; /* Full browser width */}
+.header-content, .main-container {max-width: 1300px;margin: 0 auto;}
+.header-content {display: flex; align-items: center;}
+
+
+body {background: url('bkg2.jpg') center center / cover no-repeat fixed; /* Static background settings */}
+
+/* colors */
+.bkg-light{background-color: #f0f0f0; /* Light grey */}
+.dark{color: #111111; /* dark grey */}
+.bg-dark{background-color: #111111; /* dark grey */}
+.grey{color: #444444; }
+.color{    color:rgb(166, 116, 189)}
+
+a {
+    text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    text-decoration-thickness: 1px; /* Makes the underline thinner */
+    color:rgb(166, 116, 189)
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase; /* All capitals */
+
+    margin: 0;
+    text-align: left; /* Left-justified */
+    flex-grow: 1; /* Allow h1 to take available space */
+    padding-left: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+
+    margin: 0;
+    text-align: left; /* Left-justified */
+    flex-grow: 1; /* Allow h1 to take available space */
+    padding-left: 10px;
+}
+
+.chapter-list-button {
+    font-weight: 800;
+    padding: 10px 16px; /* Add padding for clickability */
+    background: linear-gradient(to right, #cccccc, #f0f0f0); /* Gradient from dark grey to header grey */
+    border: none; /* Remove default borders */
+    font-size: 20px; /* Smaller than the header text */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.chapter-list-button:hover {
+    background: linear-gradient(to right, #dddddd, #f0f0f0); /* Gradient from dark grey to header grey */
+}
+
+/* Main container takes up the remaining vertical space */
+.main-container {
+    flex-grow: 1; /* Fills the remaining space */
+    display: flex; /* Enable flexbox for child content alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: rgba(0, 0, 0, 0); /* Optional: Add a light overlay */
+}
+
+/* Content inside the main container */
+.content {
+    max-width: 1300px; /* Same max-width as the header */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0; /* Add some padding */
+    text-align: center; /* Center-align text */
+}
+
+/* Responsive image styles */
+.responsive-image {
+    width: auto; /* Automatically adjusts width */
+    height: calc(100vh - 100px); /* Viewport height minus header height */
+    max-height: 100%; /* Prevents extending beyond the window height */
+    max-width: 100%; /* Prevents horizontal overflow */
+    object-fit: contain; /* Scales while maintaining aspect ratio */
+
+        display: none; /* Ensures images are block elements */
+        margin-bottom: 0; /* Removes any bottom margin */
+}
+
+.active {
+    display: block;
+}
+
+.slideshow {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+footer {
+    background-color: #f0f0f0; /* Same as header */
+    width: 100%; /* Full browser width */
+    padding: 20px 0; /* Add some padding */
+}
+
+.footer-content {
+    max-width: 1300px; /* Centered width limit, same as header */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center content */
+}
+
+
+
+.footer-row {
+    display: flex; /* Align columns side by side */
+    justify-content: space-between; /* Spread columns horizontally */
+
+    width: 100%; /* Ensure full width alignment */
+    border-top:1px dashed #cccccc 
+}
+
+
+
+.left-column {
+    flex: 1; /* Takes available space */
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Right-align content */
+    align-items: center;
+
+}
+
+.right-column {
+    flex: 1; /* Takes available space */
+    display: flex; /* Use flexbox */
+    align-items: center;
+}
+
+.footer-date {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 18px;
+    color: #444444; /* Dark grey text */
+    text-align: right; /* Right-align text */
+
+}
+
+.chapter-button {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px 16px; /* Button padding */
+    background-color: #cccccc; /* Same gradient as header button */
+    border: none;
+    cursor: pointer;
+    text-align: left; /* Align button to the left */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adds smooth transition */
+    cursor: pointer; /* Changes cursor on hover */
+    margin: 8px 16px;
+}
+
+.chapter-button:hover {
+    background-color:rgb(166, 116, 189); /* Same hover effect */
+
+
+}
+
+.full-list{
+display: flex;
+flex-direction: column; /* Stacks items vertically */
+align-items: center; /* Centers items horizontally */
+justify-content: center; /* Centers items vertically */
+text-align: center; /* Aligns text inside items */
+margin-bottom:20px; margin-top:-20px;
+}
+
+.hover{
+    transition: background-color 0.2s ease-in, transform 2s ease-out;
+}
+.hover:hover{
+    background-color:#e0e0e0 ;/* Same hover effect */
+transition: background-color 0.2s ease-in, transform 0.2s ease-out;
+
+}
+
+
+
+  
+  .progressbar::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: #4caf50; /* Progress line color */
+    width: 0%;
+    transition: width 0.1s ease-in-out; /* Smooth transition */
+  }
+  
+
+
+  
+  .progressbar {
+    position: relative;
+    height: 10px;
+    background: rgb(166, 116, 189); /* Background of the progress bar */
+    width: 100%; /* Full width container */
+    margin: 0; /* Removes all margin */
+    padding: 0; /* Removes all padding */
+  }
+  

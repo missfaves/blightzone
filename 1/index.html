@@ -1,255 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLIGHTZONE | Chapter 1 - DEMO</title>
-    <style>
-        /* General Styles */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            height: 100%;
-            max-width: 1300px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-        header button {
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            background-color: #555;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        header button:hover {
-            background-color: #777;
-        }
-
-        /* Content Section */
-        .content {
-            flex: 1;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Slides */
-        .slide {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) translateX(100%);
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            opacity: 0;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            object-fit: contain;
-        }
-        .slide.active {
-            transform: translate(-50%, -50%) translateX(0);
-            opacity: 1;
-        }
-
-        /* Progress Section */
-        .progress-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 1rem 0;
-        }
-        .progress-text {
-            font-size: 1rem;
-            color: #333;
-        }
-        .progress-bar-container {
-            position: relative;
-            height: 10px;
-            flex: 1;
-            margin: 0 1rem;
-            background-color: #e4e4e4;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .progress-bar {
-            position: absolute;
-            height: 100%;
-            background-color: red;
-            width: 0;
-            border-radius: 5px;
-        }
-
-        /* Lightbox styles */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border: 2px solid white;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLIGHTZONE | Chapter 0 | Read web comics online free</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../header.css">
+  <script src="../controls.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="header-left">
-                <h1>Blightzone Chapter 1</h1>
-                <button>Chapter 2</button>
-            </div>
-            <div class="header-right">
-                <button>Help</button>
-            </div>
-        </header>
+  <header class="bkg-light">
+    <div class="header-content">
+      <h1 class="dark">BLIGHTZONE CHAPTER 0</h1>
+      <button class="chapter-list-button grey">Chapter List</button>
+    </div>
+  </header>
 
-        <!-- Content Section -->
-        <div class="content">
-            <img src="01.png" alt="Slide 1" class="slide active">
-            <img src="02.png" alt="Slide 2" class="slide">
-            <img src="03.png" alt="Slide 3" class="slide">
-        </div>
-
-        <!-- Progress Section -->
-        <div class="progress-section">
-            <span class="progress-text left">Page 1</span>
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
-            </div>
-            <span class="progress-text right">Page 3</span>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <p>Footer content</p>
-        </footer>
+  <main class="main-container">
+    <div class="content slideshow">
+      <img src="01.png" alt="Blightzone Artwork" class="responsive-image active">
+      <img src="02.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="03.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="02.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="03.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="02.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="03.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="02.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="03.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="02.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="03.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="02.png" alt="Blightzone Artwork" class="responsive-image">
+      <img src="03.png" alt="Blightzone Artwork" class="responsive-image">
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0; // Start on the first slide
-        const progressBar = document.querySelector('.progress-bar');
-        const totalSlides = slides.length - 1;
+  </main>
+  
+<div class="header-content" style="width:100%;">
+<div class="progressbar"></div>
 
-        // Create the lightbox element
-        const lightbox = document.createElement('div');
-        lightbox.classList.add('lightbox');
-        lightbox.innerHTML = `<img src="../00.png" alt="Popup Image">`;
-        document.body.appendChild(lightbox);
+</div>
 
-        // Function to show the lightbox
-        function showLightbox() {
-            lightbox.style.visibility = 'visible';
-            lightbox.style.opacity = '1';
+  
 
-            // Add event listener for any key press to hide the lightbox
-            document.addEventListener('keydown', handleLightboxKeyPress);
-        }
+  <footer>
+    <div class="footer-content">
+      <div class="footer-title">
+        <h2 class="dark" style="font-weight: 800; font-size: 36pt";>BLIGHTZONE CHAPTER 0</h2>
+      </div>
+      <div id="div-wrapper ">
+        <div class="footer-row hover">
+          <div class="left-column"><span class="footer-date">April 4, 2025</span></div>
+          <div class="right-column"><button class="chapter-button">Chapter 3</button></div>
+        </div>
+        <div class="footer-row hover">
+          <div class="left-column"><span class="footer-date">April 4, 2025</span></div>
+          <div class="right-column"><button class="chapter-button">Chapter 2</button></div>
+        </div>
+        <div class="footer-row hover">
+          <div class="left-column"><span class="footer-date">April 4, 2025</span></div>
+          <div class="right-column"><button class="chapter-button">Chapter 1</button></div>
+        </div>
+        <div class="footer-row hover">
+          <div class="left-column"><span class="footer-date">April 4, 2025</span></div>
+          <div class="right-column"><button class="chapter-button">Chapter 0</button></div>
+        </div>
 
-        // Function to hide the lightbox
-        function hideLightbox() {
-            lightbox.style.visibility = 'hidden';
-            lightbox.style.opacity = '0';
+      </div>
+    </div>
+    
+  </footer>
 
-            // Remove the key press listener when the lightbox is hidden
-            document.removeEventListener('keydown', handleLightboxKeyPress);
-        }
 
-        // Key press handler for the lightbox
-        function handleLightboxKeyPress() {
-            hideLightbox();
-        }
+  <div id="footer"></div>
 
-        // Add event listener to close the lightbox when clicked
-        lightbox.addEventListener('click', hideLightbox);
+  <script>
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
 
-        // Update progress bar
-        function updateProgress() {
-            const progress = (currentIndex / totalSlides) * 100;
-            progressBar.style.width = `${progress}%`;
-        }
 
-        function showSlide(newIndex, direction) {
-            if (newIndex >= 0 && newIndex < slides.length) {
-                const currentSlide = slides[currentIndex];
-                const nextSlide = slides[newIndex];
 
-                // Set outgoing slide
-                currentSlide.style.transform = direction === 'left'
-                    ? 'translate(-50%, -50%) translateX(100%)'
-                    : 'translate(-50%, -50%) translateX(-100%)';
-                currentSlide.style.opacity = '0';
 
-                // Set incoming slide
-                nextSlide.style.transform = 'translate(-50%, -50%) translateX(0)';
-                nextSlide.style.opacity = '1';
 
-                currentIndex = newIndex;
-                updateProgress();
-            }
-        }
 
-        document.addEventListener('keydown', (e) => {
-            if (lightbox.style.visibility === 'visible') {
-                // Do nothing if the lightbox is visible
-                return;
-            }
-
-            if (e.key === 'ArrowLeft' && currentIndex === 0) {
-                showLightbox(); // Show the lightbox for the first slide
-            } else if (e.key === 'ArrowRight' && currentIndex < slides.length - 1) {
-                showSlide(currentIndex + 1, 'right');
-            } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-                showSlide(currentIndex - 1, 'left');
-            }
-        });
-
-        // Initialize progress bar
-        updateProgress();
-    </script>
+  
 </body>
 </html>
