@@ -17,10 +17,31 @@ header {
     width: 100%; /* Full browser width */
   }
   
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+
+    margin: 0;
+    text-align: left; /* Left-justified */
+    flex-grow: 1; /* Allow h1 to take available space */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.chapter-header{font-size:36px; font-weight: 900;}
+
+
   @media (max-width: 768px) { /* Target screens narrower than 768px */
     header {
       display: none; /* Hides the header */
     }
+    .chapter-header {
+        font-size: 26pt;
+        text-align: center; /* Left-justified */
+        margin-bottom:50px
+        
+
+    }
+    
   }
 
 
@@ -59,15 +80,6 @@ h1 {
     padding-left: 10px;
 }
 
-h2 {
-    font-size: 32px;
-    font-weight: 600;
-
-    margin: 0;
-    text-align: left; /* Left-justified */
-    flex-grow: 1; /* Allow h1 to take available space */
-    padding-left: 10px;
-}
 
 .chapter-list-button {
     font-weight: 800;
