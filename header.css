@@ -37,7 +37,8 @@ header {
     .chapter-header {
         font-size: 26pt;
         text-align: center; /* Left-justified */
-        margin-bottom:50px
+        margin-bottom:50px;
+        font-weight: 600;
         
 
     }
@@ -60,6 +61,7 @@ body {background: url('bkg2.jpg') center center / cover no-repeat fixed; /* Stat
 
 a {
     text-decoration: none; /* Removes underline */
+    color:#111111
 }
 
 a:hover {
