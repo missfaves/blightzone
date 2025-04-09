@@ -13,7 +13,17 @@ body, html {
 
 button{font-family: "Afacad Flux", sans-serif; font-optical-sizing: auto; font-optical-sizing: auto;}
 
-header {width: 100%; /* Full browser width */}
+header {
+    width: 100%; /* Full browser width */
+  }
+  
+  @media (max-width: 768px) { /* Target screens narrower than 768px */
+    header {
+      display: none; /* Hides the header */
+    }
+  }
+
+
 .header-content, .main-container {max-width: 1300px;margin: 0 auto;}
 .header-content {display: flex; align-items: center;}
 

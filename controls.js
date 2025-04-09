@@ -63,28 +63,42 @@ let isSwiping = false;
 
 document.addEventListener('touchstart', (event) => {
   startX = event.touches[0].clientX;
+  startY = event.touches[0].clientY; // Capture the vertical start position
   isSwiping = true;
 });
-
-document.addEventListener('touchmove', (event) => {
-  event.preventDefault();
-}, { passive: false });
 
 document.addEventListener('touchend', (event) => {
   if (isSwiping) {
     const endX = event.changedTouches[0].clientX;
-    handleSwipe(startX, endX);
+    const endY = event.changedTouches[0].clientY;
+    handleSwipe(startX, endX, startY, endY);
     isSwiping = false;
   }
 });
 
-const handleSwipe = (startX, endX) => {
-  const swipeDistance = endX - startX;
-  const swipeThreshold = 50; 
+const handleSwipe = (startX, endX, startY, endY) => {
+  const horizontalSwipeDistance = endX - startX;
+  const verticalSwipeDistance = endY - startY;
+  const swipeThreshold = 50; // Minimum distance for a swipe
 
-  if (swipeDistance > swipeThreshold) {
-    updateActiveImage('prev');
-  } else if (swipeDistance < -swipeThreshold) {
-    updateActiveImage('next');
+  // Prioritize horizontal swipes
+  if (Math.abs(horizontalSwipeDistance) > Math.abs(verticalSwipeDistance)) {
+    if (horizontalSwipeDistance > swipeThreshold) {
+      // Swipe right
+      updateActiveImage('prev');
+    } else if (horizontalSwipeDistance < -swipeThreshold) {
+      // Swipe left
+      updateActiveImage('next');
+    }
+  } else {
+    // Vertical swipes
+    if (verticalSwipeDistance < -swipeThreshold) {
+      // Swipe up
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    } else if (verticalSwipeDistance > swipeThreshold) {
+      // Swipe down
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 };
+
