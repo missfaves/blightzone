@@ -102,3 +102,7 @@ const handleSwipe = (startX, endX, startY, endY) => {
   }
 };
 
+document.addEventListener('touchmove', (event) => {
+  // Prevent default scrolling
+  event.preventDefault();
+}, { passive: false });
