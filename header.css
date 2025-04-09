@@ -11,6 +11,9 @@ body, html {
     font-optical-sizing: auto;
 }
 
+img{margin:  0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+}
+
 button{font-family: "Afacad Flux", sans-serif; font-optical-sizing: auto; font-optical-sizing: auto;}
 
 header {
