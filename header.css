@@ -30,7 +30,8 @@ header {
     padding-left: 10px;
     padding-right: 10px;
 }
-.chapter-header{font-size:36px; font-weight: 900;}
+
+.chapter-header{font-size:36px; font-weight: 800;}
 
 
   @media (max-width: 768px) { /* Target screens narrower than 768px */
@@ -41,7 +42,7 @@ header {
         font-size: 26pt;
         text-align: center; /* Left-justified */
         margin-bottom:50px;
-        font-weight: 600;
+        font-weight: 800;
         
 
     }
