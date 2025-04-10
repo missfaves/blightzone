@@ -33,18 +33,29 @@ header {
 
 .chapter-header{font-size:36px; font-weight: 800;}
 
+/* Responsive image styles */
+.responsive-image {
+    width: auto; /* Automatically adjusts width */
+    height: calc(100vh - 100px); /* Viewport height minus header height */
+    max-height: 100%; /* Prevents extending beyond the window height */
+    max-width: 100%; /* Prevents horizontal overflow */
+    object-fit: contain ; /* Scales while maintaining aspect ratio */
+        display: none; /* Ensures images are block elements */
+        margin-bottom: 0; /* Removes any bottom margin */
+}
+
+
 
   @media (max-width: 768px) { /* Target screens narrower than 768px */
     header {
       display: none; /* Hides the header */
     }
+    .responsive-image {   height: 100%}
     .chapter-header {
         font-size: 26pt;
         text-align: center; /* Left-justified */
         margin-bottom:50px;
         font-weight: 800;
-        
-
     }
     
   }
@@ -117,17 +128,7 @@ h1 {
     text-align: center; /* Center-align text */
 }
 
-/* Responsive image styles */
-.responsive-image {
-    width: auto; /* Automatically adjusts width */
-    height: calc(100vh - 100px); /* Viewport height minus header height */
-    max-height: 100%; /* Prevents extending beyond the window height */
-    max-width: 100%; /* Prevents horizontal overflow */
-    object-fit: contain; /* Scales while maintaining aspect ratio */
 
-        display: none; /* Ensures images are block elements */
-        margin-bottom: 0; /* Removes any bottom margin */
-}
 
 .active {
     display: block;
